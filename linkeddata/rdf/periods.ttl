@@ -29,7 +29,7 @@ period:13 atlantgis:period_after period:17 .
 
 period:17 rdf:type atlantgis:Period .
 period:17 atlantgis:code 'IIb'@en.
-period:17 atlantgis:description 'Period of Kleito's and Poseidon's descandants'@en.
+period:17 atlantgis:description 'Period of Kleito`s and Poseidon`s descandants'@en.
 period:17 atlantgis:period_before period:13 .
 period:17 atlantgis:period_after period:25 .
 
