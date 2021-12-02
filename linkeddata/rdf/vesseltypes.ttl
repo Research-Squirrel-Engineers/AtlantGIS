@@ -2,6 +2,8 @@
 # C:\Users\Florian Thiery\Documents\GitHub\AtlantGIS\vector\lod\py\Finds_VesselTypes.csv
 # on 2019-11-28 22:50
 # by python script
+# and manual modifications
+# on 2021-12-02 13:24
 
 PREFIX atlantgis: <http://atlantgis.squirrel.link/ontology/>
 PREFIX vesseltype: <http://atlantgis.squirrel.link/data/vesseltype/>
@@ -11,74 +13,101 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX getty: <http://vocab.getty.edu/aat/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 vesseltype:1 rdf:type atlantgis:VesselType .
-vesseltype:1 rdfs:label 'Amphora'@de.
+vesseltype:1 rdfs:label 'Amphore'@de.
+vesseltype:1 rdfs:label 'Amphora'@en.
 vesseltype:1 atlantgis:name 'Amphora'@de.
 vesseltype:1 atlantgis:function 'Vorratsgefäß'@de.
 vesseltype:1 atlantgis:description 'bauchiges enghalsiges Gefäß mit zwei Henkeln'@de.
+vesseltype:1 skos:definition 'bauchiges enghalsiges Gefäß mit zwei Henkeln'@de.
+vesseltype:1 skos:definition 'bulbous narrow-necked vessel with two handles'@en.
 vesseltype:1 owl:sameAs wd:Q178401.
 vesseltype:1 owl:sameAs getty:300148696.
 
 vesseltype:2 rdf:type atlantgis:VesselType .
 vesseltype:2 rdfs:label 'Lekanis'@de.
+vesseltype:2 rdfs:label 'Lekanis'@en.
 vesseltype:2 atlantgis:name 'Lekanis'@de.
 vesseltype:2 atlantgis:function 'Vorratsgefäß'@de.
 vesseltype:2 atlantgis:description 'flache Schüssel mit horizontalen Henkeln'@de.
+vesseltype:2 skos:definition 'flache Schüssel mit horizontalen Henkeln'@de.
+vesseltype:2 skos:definition 'shallow bowl with horizontal handles'@de.
 vesseltype:2 owl:sameAs wd:Q1246179.
-vesseltype:1 owl:sameAs getty:300148696.
 
 vesseltype:3 rdf:type atlantgis:VesselType .
 vesseltype:3 rdfs:label 'Stamnos'@de.
+vesseltype:3 rdfs:label 'Stamnos'@en.
 vesseltype:3 atlantgis:name 'Stamnos'@de.
 vesseltype:3 atlantgis:function 'Vorratsgefäß'@de.
 vesseltype:3 atlantgis:description 'dickbauchiges Vorratsgefäß mit kurzem Hals und seitlichen'@de.
+vesseltype:3 skos:definition 'dickbauchiges Vorratsgefäß mit kurzem Hals und seitlichen'@de.
+vesseltype:3 skos:definition 'potbellied storage vessel with a short neck and lateral'@en.
 vesseltype:3 owl:sameAs wd:Q1421582.
 vesseltype:3 owl:sameAs getty:300198881.
 
 vesseltype:4 rdf:type atlantgis:VesselType .
 vesseltype:4 rdfs:label 'Psykter'@de.
+vesseltype:4 rdfs:label 'Psykter'@en.
 vesseltype:4 atlantgis:name 'Psykter'@de.
 vesseltype:4 atlantgis:function 'Symposionsgefäß'@de.
 vesseltype:4 atlantgis:description 'pilzähliches Gefäß'@de.
+vesseltype:4 skos:definition 'pilzähliches Gefäß'@de.
+vesseltype:4 skos:definition 'mushroom-like vessel'@en.
 vesseltype:4 owl:sameAs wd:Q1423434.
 vesseltype:4 owl:sameAs getty:300198869.
 
 vesseltype:5 rdf:type atlantgis:VesselType .
 vesseltype:5 rdfs:label 'Nestoris'@de.
+vesseltype:5 rdfs:label 'Nestoris'@en.
 vesseltype:5 atlantgis:name 'Nestoris'@de.
 vesseltype:5 atlantgis:function 'Kultgefäß'@de.
 vesseltype:5 atlantgis:description 'Gefäß mit ovoidem Körper und stark über die Gefäßlippe gezogenen Seitenhenkeln'@de.
+vesseltype:5 skos:definition 'Gefäß mit ovoidem Körper und stark über die Gefäßlippe gezogenen Seitenhenkeln'@de.
+vesseltype:5 skos:definition 'vessel with ovoid body and lateral legs strongly drawn over the vessel lip'@en.
 vesseltype:5 owl:sameAs wd:Q942612.
 
 vesseltype:6 rdf:type atlantgis:VesselType .
 vesseltype:6 rdfs:label 'Kyathos'@de.
+vesseltype:6 rdfs:label 'Kyathos'@en.
 vesseltype:6 atlantgis:name 'Kyathos'@de.
 vesseltype:6 atlantgis:function 'Symposionsgefäß'@de.
 vesseltype:6 atlantgis:description 'Schöpfkelle mit langem Henkel'@de.
+vesseltype:6 skos:definition 'Schöpfkelle mit langem Henkel'@de.
+vesseltype:6 skos:definition 'ladle with long handle'@en.
 vesseltype:6 owl:sameAs wd:Q1755627.
 vesseltype:6 owl:sameAs getty:300201179.
 
 vesseltype:7 rdf:type atlantgis:VesselType .
 vesseltype:7 rdfs:label 'Kalathos'@de.
+vesseltype:7 rdfs:label 'Kalathos'@en.
 vesseltype:7 atlantgis:name 'Kalathos'@de.
 vesseltype:7 atlantgis:function 'Vorratsgefäß'@de.
 vesseltype:7 atlantgis:description 'Lilienförmiges Vorratsgefäß mit steiler Wandung und ausbiegendem Rand'@de.
+vesseltype:7 skos:definition 'Lilienförmiges Vorratsgefäß mit steiler Wandung und ausbiegendem Rand'@de.
+vesseltype:7 skos:definition 'lily-shaped storage vessel with a steep wall and a curving rim'@en.
 vesseltype:7 owl:sameAs wd:Q492461.
 vesseltype:7 owl:sameAs getty:300198843.
 
 vesseltype:8 rdf:type atlantgis:VesselType .
 vesseltype:8 rdfs:label 'Kernos'@de.
+vesseltype:8 rdfs:label 'Kernos'@en.
 vesseltype:8 atlantgis:name 'Kernos'@de.
 vesseltype:8 atlantgis:function 'Kultgefäß'@de.
 vesseltype:8 atlantgis:description 'Schale'@de.
+vesseltype:8 skos:definition 'Schale'@de.
+vesseltype:8 skos:definition 'bowl'@en.
 vesseltype:8 owl:sameAs wd:Q180119.
 vesseltype:8 owl:sameAs getty:300198918.
 
 vesseltype:9 rdf:type atlantgis:VesselType .
 vesseltype:9 rdfs:label 'Rhyton'@de.
+vesseltype:9 rdfs:label 'Rhyton'@en.
 vesseltype:9 atlantgis:name 'Rhyton'@de.
 vesseltype:9 atlantgis:function 'Kultgefäß'@de.
-vesseltype:9 atlantgis:description 'Trinkgefäß oder Spendegefäß zum Ausgießen von Trankopfern '@de.
+vesseltype:9 atlantgis:description 'Trinkgefäß oder Spendegefäß zum Ausgießen von Trankopfern'@de.
+vesseltype:9 skos:definition 'Trinkgefäß oder Spendegefäß zum Ausgießen von Trankopfern'@de.
+vesseltype:9 skos:definition 'drinking vessel or dispensing vessel for pouring libations'@en.
 vesseltype:9 owl:sameAs wd:Q828450.
 vesseltype:9 owl:sameAs getty:300198841.
