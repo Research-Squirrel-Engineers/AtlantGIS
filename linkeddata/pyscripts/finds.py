@@ -72,10 +72,10 @@ for index, row in data.iterrows():
 # write output file
 file = codecs.open(file_out, "w", "utf-8")
 prefixes = []
-prefixes.append("PREFIX atlantgis: <http://atlantgis.squirrel.link/ontology#>")
-prefixes.append("PREFIX site: <http://atlantgis.squirrel.link/site#>")
-prefixes.append("PREFIX find: <http://atlantgis.squirrel.link/find#>")
-prefixes.append("PREFIX vesseltype: <http://atlantgis.squirrel.link/vesseltype#>")
+prefixes.append("PREFIX atlantgis: <http://atlantgis.squirrel.link/ontology/>")
+prefixes.append("PREFIX site: <http://atlantgis.squirrel.link/data/site/>")
+prefixes.append("PREFIX find: <http://atlantgis.squirrel.link/data/find/>")
+prefixes.append("PREFIX vesseltype: <http://atlantgis.squirrel.link/data/vesseltype/>")
 prefixes.append("PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>")
 prefixes.append("PREFIX owl: <http://www.w3.org/2002/07/owl#>")
 prefixes.append("PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>")
