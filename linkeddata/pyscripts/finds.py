@@ -1,8 +1,8 @@
 __author__ = "Florian Thiery"
-__copyright__ = "MIT Licence 2019, Research Squirrel Engineers, Florian Thiery"
+__copyright__ = "MIT Licence 2021, Research Squirrel Engineers, Florian Thiery"
 __credits__ = ["Florian Thiery", "Research Squirrel Engineers"]
 __license__ = "MIT"
-__version__ = "0.1"
+__version__ = "1.0"
 __maintainer__ = "Florian Thiery"
 __email__ = "rse@fthiery.de"
 __status__ = "draft"
@@ -21,14 +21,14 @@ file_out = dir_path + "\\" + "finds.ttl"
 
 # read csv file
 data = pd.read_csv(
-    file_in, # relative python path to subdirectory
+    file_in,  # relative python path to subdirectory
     encoding='utf-8',
-    sep=',', # deliminiter
+    sep=',',  # deliminiter
     quotechar="'",  # single quote allowed as quote character
-    dtype={"muendungsD": float, "muendungsH": float, "minD": float, "minD_H": float, "maxD": float, "maxD_H": float, "bodenD": float, "size": int, "wall": int, "temperSize": object}, # parse as an integer
-    #usecols=['site', 'feature', 'objectF', 'classF', 'sherd', 'vesselShape'], # only load the  columns specified
-    skiprows=0, # skip X rows of the file
-    na_values=['.', '??'] # take any '.' or '??' values as NA
+    dtype={"muendungsD": float, "muendungsH": float, "minD": float, "minD_H": float, "maxD": float, "maxD_H": float, "bodenD": float, "size": int, "wall": int, "temperSize": object},  # parse as an integer
+    # usecols=['site', 'feature', 'objectF', 'classF', 'sherd', 'vesselShape'], # only load the  columns specified
+    skiprows=0,  # skip X rows of the file
+    na_values=['.', '??']  # take any '.' or '??' values as NA
 )
 
 # create triples from dataframe
@@ -37,33 +37,35 @@ i = 0
 lines = []
 for index, row in data.iterrows():
     lines.append("find:" + str(i) + " " + "rdf:type" + " atlantgis:Find .")
+    lines.append("find:" + str(i) + " " + "rdfs:label" + " " + "'Fund " + str(i) + "'@de" + ".")
+    lines.append("find:" + str(i) + " " + "rdfs:label" + " " + "'Find " + str(i) + "'@en" + ".")
     lines.append("find:" + str(i) + " " + "atlantgis:site" + " site:" + row['site'] + " .")
     lines.append("find:" + str(i) + " " + "atlantgis:vesselShape" + " vesseltype:" + str(row['vesselShape']) + " .")
     lines.append("find:" + str(i) + " " + "atlantgis:feature" + " " + "'" + row['feature'] + "'@en" + ".")
     lines.append("find:" + str(i) + " " + "atlantgis:object" + " " + "'" + str(row['objectF']) + "'" + ".")
     lines.append("find:" + str(i) + " " + "atlantgis:class" + " " + "'" + str(row['classF']) + "'" + ".")
     lines.append("find:" + str(i) + " " + "atlantgis:sherd" + " " + "'" + str(row['sherd']) + "'" + ".")
-    lines.append("find:" + str(i) + " " + "atlantgis:quantity" + " " + "'" + str(row['qty']) + "'" + ".")
-    lines.append("find:" + str(i) + " " + "atlantgis:weight" + " " + "'" + str(row['wt']) + "'" + ".")
+    lines.append("find:" + str(i) + " " + "atlantgis:quantity" + " " + "" + str(row['qty']) + "" + ".")
+    lines.append("find:" + str(i) + " " + "atlantgis:weight" + " " + "" + str(row['wt']) + "" + ".")
     lines.append("find:" + str(i) + " " + "atlantgis:temperSize" + " " + "'" + str(row['temperSize']) + "'" + ".")
     if row['size'] != -1:
-        lines.append("find:" + str(i) + " " + "atlantgis:size" + " " + "'" + str(row['size']) + "'" + ".")
+        lines.append("find:" + str(i) + " " + "atlantgis:size" + " " + "" + str(row['size']) + "" + ".")
     if row['wall'] != -1:
-        lines.append("find:" + str(i) + " " + "atlantgis:wall" + " " + "'" + str(row['wall']) + "'" + ".")
+        lines.append("find:" + str(i) + " " + "atlantgis:wall" + " " + "" + str(row['wall']) + "" + ".")
     if row['muendungsD'] != -1.0:
-        lines.append("find:" + str(i) + " " + "atlantgis:muendungsD" + " " + "'" + str(row['muendungsD']) + "'" + ".")
+        lines.append("find:" + str(i) + " " + "atlantgis:muendungsD" + " " + "" + str(row['muendungsD']) + "" + ".")
     if row['muendungsH'] != -1.0:
-        lines.append("find:" + str(i) + " " + "atlantgis:muendungsH" + " " + "'" + str(row['muendungsH']) + "'" + ".")
+        lines.append("find:" + str(i) + " " + "atlantgis:muendungsH" + " " + "" + str(row['muendungsH']) + "" + ".")
     if row['minD'] != -1.0:
-        lines.append("find:" + str(i) + " " + "atlantgis:minD" + " " + "'" + str(row['minD']) + "'" + ".")
+        lines.append("find:" + str(i) + " " + "atlantgis:minD" + " " + "" + str(row['minD']) + "" + ".")
     if row['minD_H'] != -1.0:
-        lines.append("find:" + str(i) + " " + "atlantgis:minD_H" + " " + "'" + str(row['minD_H']) + "'" + ".")
+        lines.append("find:" + str(i) + " " + "atlantgis:minD_H" + " " + "" + str(row['minD_H']) + "" + ".")
     if row['maxD'] != -1.0:
-        lines.append("find:" + str(i) + " " + "atlantgis:maxD" + " " + "'" + str(row['maxD']) + "'" + ".")
+        lines.append("find:" + str(i) + " " + "atlantgis:maxD" + " " + "" + str(row['maxD']) + "" + ".")
     if row['maxD_H'] != -1.0:
-        lines.append("find:" + str(i) + " " + "atlantgis:maxD_H" + " " + "'" + str(row['maxD_H']) + "'" + ".")
+        lines.append("find:" + str(i) + " " + "atlantgis:maxD_H" + " " + "" + str(row['maxD_H']) + "" + ".")
     if row['bodenD'] != -1.0:
-        lines.append("find:" + str(i) + " " + "atlantgis:bodenD" + " " + "'" + str(row['bodenD']) + "'" + ".")
+        lines.append("find:" + str(i) + " " + "atlantgis:bodenD" + " " + "" + str(row['bodenD']) + "" + ".")
     lines.append("")
     i += 1
 
