@@ -2,6 +2,8 @@
 # D:\src\AtlantGIS\vector\lod\py\atlantgis_periods.csv
 # on 2019-11-27 08:16
 # by python script
+# and manual modifications
+# on 2021-12-02 13:24
 
 PREFIX atlantgis: <http://atlantgis.squirrel.link/ontology/>
 PREFIX period: <http://atlantgis.squirrel.link/data/period/>
@@ -9,31 +11,58 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX wd: <http://www.wikidata.org/entity/>
 
 period:5 rdf:type atlantgis:Period .
+period:5 rdfs:label 'Atlantis Periode I'@de.
+period:5 rdfs:label 'Atlantis Period I'@en.
 period:5 atlantgis:code 'I'@en.
 period:5 atlantgis:description 'Period from genesis to Leukippe and Euenor'@en.
+period:5 skos:definition 'Zeitraum von der Genesis bis zu Leukippe und Euenor'@de.
+period:5 skos:definition 'Period from genesis to Leukippe and Euenor'@en.
 period:5 atlantgis:period_after period:10 .
+period:5 owl:sameAs wd:Q109881323.
 
 period:10 rdf:type atlantgis:Period .
+period:10 rdfs:label 'Atlantis Periode II'@de.
+period:10 rdfs:label 'Atlantis Period II'@en.
 period:10 atlantgis:code 'II'@en.
 period:10 atlantgis:description 'Period of Kleito and Poseidon as well as of their direct descendants'@en.
+period:10 skos:definition 'Zeitalter von Kleito und Poseidon sowie ihrer direkten Nachkommen'@de.
+period:10 skos:definition 'Period of Kleito and Poseidon as well as of their direct descendants'@en.
 period:10 atlantgis:period_before period:5 .
 period:10 atlantgis:period_after period:25 .
+period:10 owl:sameAs wd:Q109881808.
 
 period:13 rdf:type atlantgis:Period .
+period:13 rdfs:label 'Atlantis Periode IIa'@de.
+period:13 rdfs:label 'Atlantis Period IIa'@en.
 period:13 atlantgis:code 'IIa'@en.
 period:13 atlantgis:description 'Period of Kleito and Poseidon'@en.
+period:13 skos:definition 'Zeitalter von Kleito und Poseidon'@de.
+period:13 skos:definition 'Period of Kleito and Poseidon'@en.
 period:13 atlantgis:period_before period:5 .
 period:13 atlantgis:period_after period:17 .
+period:13 owl:sameAs wd:Q109881947.
 
 period:17 rdf:type atlantgis:Period .
+period:17 rdfs:label 'Atlantis Periode IIb'@de.
+period:17 rdfs:label 'Atlantis Period IIb'@en.
 period:17 atlantgis:code 'IIb'@en.
 period:17 atlantgis:description 'Period of Kleito`s and Poseidon`s descandants'@en.
+period:17 skos:definition 'Zeit der Nachkommenschaft von Kleito und Poseidon'@de.
+period:17 skos:definition 'Period of Kleito`s and Poseidon`s descandants'@en.
 period:17 atlantgis:period_before period:13 .
 period:17 atlantgis:period_after period:25 .
+period:17 owl:sameAs wd:Q109882050.
 
 period:25 rdf:type atlantgis:Period .
+period:25 rdfs:label 'Atlantis Periode III'@de.
+period:25 rdfs:label 'Atlantis Period III'@en.
 period:25 atlantgis:code 'III'@en.
 period:25 atlantgis:description 'Period before doom'@en.
+period:25 skos:definition 'Zeitraum vor dem Untergang'@de.
+period:25 skos:definition 'Period before doom'@en.
 period:25 atlantgis:period_before period:10 .
+period:25 owl:sameAs wd:Q109882128.
